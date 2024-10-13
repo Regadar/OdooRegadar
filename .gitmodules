@@ -1,0 +1,4 @@
+[submodule "OCA/currency"]
+	path = OCA/currency
+	url = git@github.com:OCA/currency.git
+	branch = 16.0
