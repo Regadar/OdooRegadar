@@ -13,13 +13,8 @@
                 <field name="payment_methods_id" groups="account.group_account_invoice"/>
             </field>
 
-            <field name="vat" position="replace">
-                <label for="vat" />
-                <div class="o_row">
-                    <field name="vat"/>
-                    <field name="identification_id"/>
-                </div>
-
+            <field name="vat" position="after">
+                <field name="identification_id"/>
                 <field name="supplier_rank" invisible="1" readonly="1"/>
             </field>
 
@@ -61,9 +56,10 @@
                     <group cols="2">
                         <group cols="2">
                             <!--field name="expense_product_id" string="Default product for expenses when importing electronic invoice" /-->
-                            <field name="expense_account_id" string="Default account for expenses when importing electronic invoice" />
+                            <field name="expense_account_id" string="Default account for expenses when importing electronic invoice"/>
                             <field name="expense_analytic_account_id" string="Default analytic account for expenses when importing electronic invoice"/>
-                            <field name="load_lines" />
+                            <div class="o_form_label">Load invoice lines?</div>
+                            <field name="load_lines"/>
                         </group>
                     </group>
                     <group col="2">

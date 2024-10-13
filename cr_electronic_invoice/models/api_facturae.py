@@ -506,7 +506,7 @@ def gen_xml_v43(inv, sale_conditions, total_servicio_gravado,
             if v.get('codigo'):
                 sb.append('<CodigoComercial>')
                 sb.append('<Tipo>04</Tipo>')
-                sb.append('<Codigo>' + (v['codigo']) + '</Codigo>')
+                sb.append('<Codigo>' + (v['codigo'][:20]) + '</Codigo>')
                 sb.append('</CodigoComercial>')
 
             sb.append('<Cantidad>' + str(v['cantidad']) + '</Cantidad>')
@@ -874,11 +874,6 @@ def get_economic_activities(company):
     url_dgtd = url_dgtd + company.vat
     response = requests.get(url_dgtd, headers=headers, cookies=cookies, timeout=5)
 
-    #try:
-    #    response = requests.get(endpoint, headers=headers, verify=False)
-    #except requests.exceptions.RequestException as e:
-    #    _logger.error('Exception %s', e)
-    #    return {'status': -1, 'text': 'Excepcion %s' % e}
 
     if 200 <= response.status_code <= 299:
         _logger.debug('FECR - get_economic_activities response: %s', (response.json()))

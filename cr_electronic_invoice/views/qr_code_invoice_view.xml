@@ -6,11 +6,38 @@
         <field name="model">account.move</field>
         <field name="inherit_id" ref="account.view_move_form"/>
         <field name="arch" type="xml">
-            <h1 class="mt0" position="inside">
-                <div class="float-right">
-                    <field name="qr_image" widget="image" width="100" height="100" attrs="{'invisible': [('move_type', '=', 'entry')]}"/>
-                </div>
-            </h1>
+            <div class="oe_title" position="after">
+                <group>
+                    <group>
+                        <!--span for="name">
+                        <field name="state_tributacion" readonly="1" class="border" style="color:green"/>
+                        <field name="state" readonly="1" class="border" style="color:green" attrs="{'invisible':[('state','not in',('draft'))]}"/>
+                        <field name="tipo_documento" readonly="1" class="border" style="color:green"/>
+                        <field name="state" readonly="1" style="color:green;font-size: 20px;border: 1px solid green;padding:5px" attrs="{'invisible':[('state','not in',('draft'))]}"/>
+                        </span-->
+
+                        <span for="name" style="color:green;font-size: 20px;border: 1px solid green;padding:5px" attrs="{'invisible':[('state_tributacion','!=','aceptado')]}">Aceptada</span>
+                        <span for="name" style="color:orange;font-size: 20px;float:right;border: 1px solid orange;padding:5px" attrs="{'invisible':[('state_tributacion','!=','rechazado')]}">Rechazada</span>
+                        <span for="name" style="color:blue;font-size: 20px;float:right;border: 1px solid blue;padding:5px" attrs="{'invisible':[('state_tributacion','!=','esperando')]}">Esperando envio</span>
+                        <span for="name" style="color:#006699;font-size: 20px;float:right;border: 1px solid #006699;padding:5px" attrs="{'invisible':[('state_tributacion','!=','enviado')]}">Enviado</span>
+                        <span for="name" style="color:#006699;font-size: 20px;float:right;border: 1px solid #006699;padding:5px" attrs="{'invisible':[('state_tributacion','!=','procesando')]}">Procesando</span>
+                        <span for="name" style="color:#006699;font-size: 20px;float:right;border: 1px solid #006699;padding:5px" attrs="{'invisible':[('state_tributacion','!=','recibido')]}">Recibido</span>
+                        <span for="name" style="color:red;font-size: 20px;float:right;border: 1px solid red;padding:5px" attrs="{'invisible':[('state_tributacion','not in',('enviado_error','conexion_error', 'error', 'consultar_error'))]}">Error</span>
+                        <span for="name" style="color:green;font-size: 20px;float:right;border: 1px solid green;padding:5px" attrs="{'invisible':[('state','not in',('draft'))]}">Borrador</span>
+                        <span for="name" style="color:green;font-size: 20px;float:right;border: 1px solid green;padding:5px" attrs="{'invisible':[('tipo_documento','!=','ND')]}">Nota de Débito</span>
+                        <span for="name" style="color:green;font-size: 20px;float:right;border: 1px solid green;padding:5px" attrs="{'invisible':[('tipo_documento','!=','NC')]}">Nota de Crédito</span>
+                        <span for="name" style="color:green;font-size: 20px;border: 1px solid green;padding:5px" attrs="{'invisible':[('tipo_documento','!=','FE')]}">Factura Electrónica</span>
+                        <span for="name" style="color:green;font-size: 20px;float:right;border: 1px solid green;padding:5px" attrs="{'invisible':[('tipo_documento','!=','FEE')]}">Factura de Exportación</span>
+                        <span for="name" style="color:green;font-size: 20px;float:right;border: 1px solid green;padding:5px" attrs="{'invisible':[('tipo_documento','!=','TE')]}">Tiquete Electrónico</span>
+                        <span for="name" style="color:green;font-size: 20px;float:right;border: 1px solid green;padding:5px" attrs="{'invisible':[('tipo_documento','!=','FEC')]}">Factura de Compra</span>
+                    </group>
+                <group>
+                    <span for="name">
+                        <field name="qr_image" widget="image" options="{'size': [100, 100]}" class="oe_avatar" attrs="{'invisible': [('move_type', '=', 'entry')]}"/>
+                    </span>
+                </group>
+            </group>
+          </div>
         </field>
     </record>
 </odoo>
