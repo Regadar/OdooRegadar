@@ -135,10 +135,10 @@
                         <strong>Referencia:</strong>
                         <p class="m-0" t-field="o.ref"/>
                     </div>
-                    <div class="col-auto mw-100 mb-2" t-if="o.sale_purchase_order" name="sale_purchase_order">
+                    <!--div class="col-auto mw-100 mb-2" t-if="o.sale_purchase_order" name="sale_purchase_order">
                         <strong>N° Orden de Compra:</strong>
                         <p class="m-0" t-field="o.sale_purchase_order"/>
-                    </div>
+                    </div-->
                     <div class="col-auto mw-100 mb-2" name="exchange_rate">
                         <strong>Tipo Cambio:</strong>
                         <p class="m-0" t-esc="round(o.amount_total_signed / o.amount_total_in_currency_signed,2)"/>
