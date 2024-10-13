@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- External layouts styles -->
+    <template id="external_layout_striped" inherit_id="web.external_layout_striped">
+
+        <xpath expr="//div[@class='mt0 text-end h3' and @t-field='company.report_header']" position="after">
+            <div
+                t-if="report_type == 'pdf' and o._name == 'account.move'"
+                class="mt0 text-muted text-end"
+            >
+                <ul class="list-unstyled">
+                    <li t-if="o.tipo_documento != 'disabled'">
+                        <span
+                            class="mt0 text-end"
+                            style="font-size: 12px;"
+                        >Comprobante Electrónico V4.3</span>
+                    </li>
+                    <li t-if="o.tipo_documento">
+                        <span
+                            class="mt0 text-end h4"
+                            t-field="o.tipo_documento"
+                        />
+                    </li>
+                    <li t-if="o.economic_activity_id">
+                        <span
+                            class="mt0 text-end"
+                            t-field="o.economic_activity_id"
+                            style="font-size: 12px;"
+                        />
+                    </li>
+                    <li t-if="o.date_issuance">
+                        <span
+                            class="mt0 text-end"
+                            t-field="o.date_issuance"
+                            style="font-size: 12px;"
+                        />
+                    </li>
+                    <li t-if="o.number_electronic">
+                        <span
+                            class="mt0 text-end"
+                            t-field="o.number_electronic"
+                            style="font-size: 12px;"
+                        />
+                    </li>
+                    <li t-if="o.sequence">
+                        <span
+                            class="mt0 text-end"
+                            t-field="o.sequence"
+                            style="font-size: 12px;"
+                        />
+                    </li>
+                </ul>
+            </div>
+        </xpath>
+
+        <xpath expr="//div[@t-field='company.report_footer']" position="after">
+            <div t-if="report_type == 'pdf' and o._name == 'account.move'" style="width:85px; height:85px; position: absolute; margin-top: -53px;">
+                <span t-field="o.qr_image" t-options="{'widget': 'image'}"/>
+            </div>
+            <li t-if="report_type == 'pdf' and o._name == 'account.move'">
+                <span class="mt0 text-end" style="font-size: 10px;">Autorizada mediante resolución N° DGT-R-033-2019 del 20 de junio de 2019.</span>
+            </li>
+        </xpath>
+
+    </template>
+
+</odoo>

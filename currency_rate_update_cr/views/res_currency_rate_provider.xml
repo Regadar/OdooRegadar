@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="res_currency_rate_provider_form_view">
+        <field name="name">res.currency.rate.provider.form</field>
+        <field name="model">res.currency.rate.provider</field>
+        <field name="inherit_id" ref="currency_rate_update.res_currency_rate_provider_form_view" />
+        <field name="arch" type="xml">
+            <group name="options" position="inside">
+                <group attrs="{'invisible':[('service','!=', 'BCCR')]}">
+                    <field name="bccr_username"  />
+                    <field name="bccr_email" />
+                    <field name="bccr_token" />
+                    <div
+                        attrs="{'invisible':[('service','!=','BCCR'),('currency_name','=','CRC')]}"
+                        class="alert alert-warning"
+                        colspan="2"
+                        role="alert"
+                    >
+                        <strong>!</strong>
+                        You are using the BCCR exchange rate
+                        service with a base currency different from CRC.
+                        <br />
+                        As long as the European Central Bank only provides
+                        exchange rates based on CRC, other foreign currency
+                        rates are recalculated and might differ from real rates.
+                    </div>
+                </group>
+            </group>
+        </field>
+    </record>
+</odoo>

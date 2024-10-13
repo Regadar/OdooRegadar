@@ -1,0 +1,83 @@
+state_id:id,code,name,id
+base.state_SJ,01,SAN JOSÉ,CRSJ01
+base.state_SJ,02,ESCAZÚ,CRSJ02
+base.state_SJ,03,DESAMPARADOS,CRSJ03
+base.state_SJ,04,PURISCAL,CRSJ04
+base.state_SJ,05,TARRAZÚ,CRSJ05
+base.state_SJ,06,ASERRÍ,CRSJ06
+base.state_SJ,07,MORA,CRSJ07
+base.state_SJ,08,GOICOECHEA,CRSJ08
+base.state_SJ,09,SANTA ANA,CRSJ09
+base.state_SJ,10,ALAJUELITA,CRSJ10
+base.state_SJ,11,VÁZQUEZ DE CORONADO,CRSJ11
+base.state_SJ,12,ACOSTA,CRSJ12
+base.state_SJ,13,TIBÁS,CRSJ13
+base.state_SJ,14,MORAVIA,CRSJ14
+base.state_SJ,15,MONTES DE OCA,CRSJ15
+base.state_SJ,16,TURRUBARES,CRSJ16
+base.state_SJ,17,DOTA,CRSJ17
+base.state_SJ,18,CURRIDABAT,CRSJ18
+base.state_SJ,19,PÉREZ ZELEDÓN,CRSJ19
+base.state_SJ,20,LEÓN CORTÉS CASTRO,CRSJ20
+base.state_A,01,ALAJUELA,CRA01
+base.state_A,02,SAN RAMÓN,CRA02
+base.state_A,03,GRECIA,CRA03
+base.state_A,04,SAN MATEO,CRA04
+base.state_A,05,ATENAS,CRA05
+base.state_A,06,NARANJO,CRA06
+base.state_A,07,PALMARES,CRA07
+base.state_A,08,POÁS,CRA08
+base.state_A,09,OROTINA,CRA09
+base.state_A,10,SAN CARLOS,CRA10
+base.state_A,11,ZARCERO,CRA11
+base.state_A,12,SARCHÍ,CRA12
+base.state_A,13,UPALA,CRA13
+base.state_A,14,LOS CHILES,CRA14
+base.state_A,15,GUATUSO,CRA15
+base.state_A,16,RÍO CUARTO,CRA16
+base.state_C,01,CARTAGO,CRC01
+base.state_C,02,PARAÍSO,CRC02
+base.state_C,03,LA UNIÓN,CRC03
+base.state_C,04,JIMÉNEZ,CRC04
+base.state_C,05,TURRIALBA,CRC05
+base.state_C,06,ALVARADO,CRC06
+base.state_C,07,OREAMUNO,CRC07
+base.state_C,08,EL GUARCO,CRC08
+base.state_H,01,HEREDIA,CRH01
+base.state_H,02,BARVA,CRH02
+base.state_H,03,SANTO DOMINGO,CRH03
+base.state_H,04,SANTA BÁRBARA,CRH04
+base.state_H,05,SAN RAFAEL,CRH05
+base.state_H,06,SAN ISIDRO,CRH06
+base.state_H,07,BELÉN,CRH07
+base.state_H,08,FLORES,CRH08
+base.state_H,09,SAN PABLO,CRH09
+base.state_H,10,SARAPIQUÍ,CRH10
+base.state_G,01,LIBERIA,CRG01
+base.state_G,02,NICOYA,CRG02
+base.state_G,03,SANTA CRUZ,CRG03
+base.state_G,04,BAGACES,CRG04
+base.state_G,05,CARRILLO,CRG05
+base.state_G,06,CAÑAS,CRG06
+base.state_G,07,ABANGARES,CRG07
+base.state_G,08,TILARÁN,CRG08
+base.state_G,09,NANDAYURE,CRG09
+base.state_G,10,LA CRUZ,CRG10
+base.state_G,11,HOJANCHA,CRG11
+base.state_P,01,PUNTARENAS,CRP01
+base.state_P,02,ESPARZA,CRP02
+base.state_P,03,BUENOS AIRES,CRP03
+base.state_P,04,MONTES DE ORO,CRP04
+base.state_P,05,OSA,CRP05
+base.state_P,06,QUEPOS,CRP06
+base.state_P,07,GOLFITO,CRP07
+base.state_P,08,COTO BRUS,CRP08
+base.state_P,09,PARRITA,CRP09
+base.state_P,10,CORREDORES,CRP10
+base.state_P,11,GARABITO,CRP11
+base.state_L,01,LIMÓN,CRL01
+base.state_L,02,POCOCÍ,CRL02
+base.state_L,03,SIQUIRRES,CRL03
+base.state_L,04,TALAMANCA,CRL04
+base.state_L,05,MATINA,CRL05
+base.state_L,06,GUÁCIMO,CRL06
