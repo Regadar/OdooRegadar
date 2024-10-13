@@ -25,5 +25,6 @@ from . import qr_generator
 from . import invoice_qr_fields
 from . import ir_mail_server
 
+
 #REGADAR
 from . import special_tags_lines
