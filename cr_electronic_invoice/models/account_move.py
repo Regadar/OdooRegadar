@@ -1716,7 +1716,7 @@ class AccountInvoiceElectronic(models.Model):
         else:
             email_template = self.env.ref('account.email_template_edi_invoice', raise_if_not_found=False)
 
-        email_template.attachment_ids = [(5, 0, 0)]
+        email_template.sudo().attachment_ids = [(5, 0, 0)]
 
         lang = False
         if email_template:
