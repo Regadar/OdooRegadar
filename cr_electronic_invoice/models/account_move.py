@@ -645,14 +645,14 @@ class AccountInvoiceElectronic(models.Model):
 
                                 attach_copy = attachment.copy()
                                 attach_resp_copy = attachment_resp.copy()
-                                email_template.attachment_ids = [(6, 0, [attach_copy.id, attach_resp_copy.id])]
+                                email_template.sudo().attachment_ids = [(6, 0, [attach_copy.id, attach_resp_copy.id])]
                                 #email_template.attachment_ids = [(6, 0, [attachment.id, attachment_resp.id])]
 
                                 email_template.with_context(type='binary',
                                                             default_type='binary').send_mail(i.id,
                                                                                              raise_exception=False,
                                                                                              force_send=True)
-                                email_template.attachment_ids = [(5, 0, 0)]
+                                email_template.sudo().attachment_ids = [(5, 0, 0)]
 
                 elif estado_m_h in ('firma_invalida'):
                     if i.error_count > 10:
@@ -1697,7 +1697,7 @@ class AccountInvoiceElectronic(models.Model):
                 if attachment_resp:
                     attach_copy = attachment.copy()
                     attach_resp_copy = attachment_resp.copy()
-                    email_template.attachment_ids = [(6, 0, [attach_copy.id, attach_resp_copy.id])]
+                    email_template.sudo().attachment_ids = [(6, 0, [attach_copy.id, attach_resp_copy.id])]
                     email_template.with_context(type='binary',
                                                 default_type='binary').send_mail(self.id,
                                                                                  raise_exception=False,
@@ -1705,7 +1705,7 @@ class AccountInvoiceElectronic(models.Model):
                     _logger.error(
                                         'E-INV CR - MASS SEND - Exitoso: %s',
                                         self.sequence)
-                    email_template.attachment_ids = [(5, 0, 0)]
+                    email_template.sudo().attachment_ids = [(5, 0, 0)]
 
     def action_invoice_sent(self):
         self.ensure_one()
@@ -1741,7 +1741,7 @@ class AccountInvoiceElectronic(models.Model):
                 if attachment_resp:
                     attach_copy = attachment.copy()
                     attach_resp_copy = attachment_resp.copy()
-                    email_template.attachment_ids = [(6, 0, [attach_copy.id, attach_resp_copy.id])]
+                    email_template.sudo().attachment_ids = [(6, 0, [attach_copy.id, attach_resp_copy.id])]
                 else:
                     raise UserError(_('Response XML from Hacienda has not been received'))
             else:

@@ -182,7 +182,7 @@
 <!--            </xpath>-->
             <xpath expr="//div[@id='qrcode']" position="after">
                 <div class="row">
-                    <div class="col-6" t-if="o.company_id.invoice_bank_accounts">
+                    <!--div class="col-6" t-if="o.company_id.invoice_bank_accounts">
                         <b>Cuentas Bancarias</b><br/>
                         <p t-if="o.company_id.invoice_bank_accounts" name="invoice_bank_accounts" style="line-height: 10pt; font-size: 100%;">
                             <span t-field="o.company_id.invoice_bank_accounts"/>
@@ -193,7 +193,7 @@
                         <p t-if="o.company_id.invoice_bank_accounts" name="invoice_bank_accounts" style="line-height: 10pt; font-size: 100%;">
                             <span t-field="o.company_id.invoice_conditions"/>
                         </p>
-                    </div>
+                    </div-->
                 </div><br/>
                 <p name="invoice_bank_accounts" style="line-height: 10pt; font-size: 100%;" class="mt-0 mb-0">
                     <b>Recibido conforme</b><br/><br/>
@@ -206,9 +206,9 @@
                         Tributación.</small>
                     <small>Versión: 4.3</small>
                 </p>
-                <p t-if="o.contingencia and o.state_tributacion != 'aceptado'" style="color: #ff0000; font-size: 20px;">
+                <!--p t-if="o.contingencia and o.state_tributacion != 'aceptado'" style="color: #ff0000; font-size: 20px;">
                    Este comprobante no puede ser utilizado para fines tributarios, por lo cual, no se permitirá su uso para respaldo de créditos o gastos.
-                </p><br/>
+                </p--><br/>
             </xpath>
              <xpath expr="//p[@name='payment_communication']" position="attributes">
                 <attribute name="style">margin: 0px;</attribute>
@@ -243,5 +243,5 @@
             <xpath expr="//div[@class='clearfix mb-4']" position="attributes">
                 <attribute name="class">clearfix mb-1</attribute>
             </xpath>
-        </template>
+    </template>
     </odoo>
