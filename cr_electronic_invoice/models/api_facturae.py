@@ -853,13 +853,14 @@ def get_economic_activities(company):
     response_chrome_version = requests.get(url_chrome)
     data = response_chrome_version.json()
     latest_version = data['versions'][0]['version']
-    url_dgtd = "https://api.hacienda.go.cr/fe/ae?identificacion="
+    #url_dgtd = "https://api.hacienda.go.cr/fe/ae?identificacion="
+    url_dgtd = "https://invefacon.com/api/externos/consultarcedula.php?identificacion="
     headers = {
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/png,image/svg+xml,*/*;q=0.8",
         "Accept-Encoding": "gzip, deflate, br, zstd",
         "Accept-Language": "es-ES,es;q=0.8,en-US;q=0.5,en;q=0.3",
         "Connection": "keep-alive",
-        "Host": "api.hacienda.go.cr",
+        "Host": "invefacon.com",
         "Priority": "u=0, i",
         "Sec-Fetch-Dest": "document",
         "Sec-Fetch-Mode": "navigate",
