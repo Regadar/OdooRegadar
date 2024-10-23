@@ -186,7 +186,7 @@ class FetchmailServer(models.Model):
                     receiver_company_id = self.env['res.company'].search([('vat', '=', receptor),('import_bill_automatic', '=', True)], limit=1)
                     if not receiver_company_id: #  or not receiver_company_id.import_bill_automatic
                         _logger.info("Company with VAT %s is not configured for automatic bill import", receptor )
-                        continue
+                        return False  # Company is not enabled, no further processing required
                     purchase_journal = receiver_company_id.import_bill_journal_id
                     self = self.with_context(default_journal_id=purchase_journal.id,
                                              default_type=type_invoice, type=type_invoice, journal_type='purchase')
